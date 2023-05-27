@@ -29,6 +29,12 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
+    - {{ cdt('mesa-libglapi') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libglvnd-glx') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libglvnd') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libxshmfence-devel') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libx11-common') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('mesa-khr-devel') }}  # [linux & (ppc64le | aarch64 | armv7l)]
   host:
     - libglu                             # [linux]
     - libxcb                             # [linux]
@@ -53,6 +59,12 @@ test:
     - {{ compiler('c') }}
     - cmake
     - ninja
+    - {{ cdt('mesa-libglapi') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libglvnd-glx') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libglvnd') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libxshmfence-devel') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('libx11-common') }}  # [linux & (ppc64le | aarch64 | armv7l)]
+    - {{ cdt('mesa-khr-devel') }}  # [linux & (ppc64le | aarch64 | armv7l)]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
